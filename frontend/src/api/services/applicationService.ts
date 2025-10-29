@@ -1,5 +1,5 @@
 import axios from '../axios';
-import { Application, ApplicationResponse, ApplicationsResponse } from '../../types/api';
+import { ApplicationResponse, ApplicationsResponse } from '../../types/api';
 import { ApplicationStatus } from '../../types/enums';
 
 export const applicationService = {
