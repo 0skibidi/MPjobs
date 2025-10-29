@@ -1,6 +1,6 @@
-# FBLA Job Board
+# MPJobs
 
-A modern job board application built for FBLA, connecting job seekers with employers through an intuitive platform.
+A modern job board application connecting job seekers with employers through an intuitive platform.
 
 ## Features
 
@@ -38,8 +38,8 @@ A modern job board application built for FBLA, connecting job seekers with emplo
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Juslemmepublishbro/mpjobs.git
-cd mpjobs
+git clone https://github.com/0skibidi/MPjobs.git
+cd MPjobs
 ```
 
 2. Install dependencies
@@ -150,11 +150,7 @@ npm run preview         # Preview production build
 
 ## Contributing
 
-This is an FBLA project. For contributions or questions, please contact the project maintainers.
-
-## License
-
-This project is created for FBLA competition purposes.
+For contributions or questions, please contact the project maintainers.
 
 ## Support
 
