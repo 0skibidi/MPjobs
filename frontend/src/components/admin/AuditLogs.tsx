@@ -10,7 +10,6 @@ import {
   TableRow,
   TablePagination,
   TextField,
-  Box,
   Typography,
   Grid,
   MenuItem
@@ -31,7 +30,7 @@ const actionTypes = [
 
 export const AuditLogs: React.FC = () => {
   const dispatch = useDispatch();
-  const { auditLogs, loading } = useSelector((state: RootState) => state.admin);
+  const { auditLogs } = useSelector((state: RootState) => state.admin);
   
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
