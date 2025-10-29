@@ -7,13 +7,21 @@ import { Redis } from 'ioredis';
 let redis: Redis | null = null;
 if (config.redisUrl) {
   try {
-    redis = new Redis(config.redisUrl);
+    redis = new Redis(config.redisUrl, {
+      maxRetriesPerRequest: 3,
+      enableOfflineQueue: false,
+      lazyConnect: true
+    });
     redis.on('error', (err) => {
-      console.warn('Redis connection error:', err.message);
-      redis = null;
+      console.warn('Redis not available, using in-memory token storage');
+      if (redis) {
+        redis.disconnect();
+        redis = null;
+      }
     });
   } catch (err) {
     console.warn('Failed to initialize Redis, using in-memory token storage');
+    redis = null;
   }
 }
 
