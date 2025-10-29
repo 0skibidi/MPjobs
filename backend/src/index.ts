@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/database';
+import { config } from './config/config';
 import authRoutes from './routes/auth.routes';
 import jobRoutes from './routes/job.routes';
 import userRoutes from './routes/user.routes';
@@ -31,10 +32,16 @@ app.use(cors({
     if (!origin) return callback(null, true);
     
     // Allow all localhost origins
-    if (origin.startsWith('http://localhost:')) {
+    if (origin && origin.startsWith('http://localhost:')) {
       return callback(null, true);
     }
     
+    // Allow the configured CORS origin
+    if (origin === config.corsOrigin) {
+      return callback(null, true);
+    }
+    
+    console.warn(`CORS rejected request from origin: ${origin}`);
     callback(new Error('Not allowed by CORS'));
   },
   credentials: true
