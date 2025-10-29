@@ -3,8 +3,19 @@ import { config } from '../config/config';
 import { IUser } from '../models/user.model';
 import { Redis } from 'ioredis';
 
-// Initialize Redis client for token blacklisting
-const redis = new Redis(config.redisUrl);
+// Initialize Redis client for token blacklisting (optional)
+let redis: Redis | null = null;
+if (config.redisUrl) {
+  try {
+    redis = new Redis(config.redisUrl);
+    redis.on('error', (err) => {
+      console.warn('Redis connection error:', err.message);
+      redis = null;
+    });
+  } catch (err) {
+    console.warn('Failed to initialize Redis, using in-memory token storage');
+  }
+}
 
 interface TokenPayload {
   userId: string;
