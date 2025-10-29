@@ -1,0 +1,647 @@
+[2025-04-05T07:30:51.419Z] [DEBUG] Registration request received [ID: m93w9qc89nr7to3menl]
+{
+  body: {
+    name: 'Employer Test',
+    email: 'employertest@gmail.com',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '101',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwOTM3NGM4ZjgxMjUxZjA5NzYxYzEiLCJyb2xlIjoiZW1wbG95ZXIiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzQzODM4MjAzLCJleHAiOjE3NDM5MjQ2MDN9.VBjaAz0fLfveoEjkj1Z4Pq4v9jhjVnm2IMXPBU5J87I',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5174',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5174/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T07:30:51.421Z] [DB] Database connection state [ID: m93w9qc89nr7to3menl]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T07:30:51.572Z] [SECURITY] Password hashed successfully [ID: m93w9qc89nr7to3menl]
+{ success: true }
+
+[2025-04-05T07:30:51.573Z] [DB] Collection selected for role [ID: m93w9qc89nr7to3menl]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-04-05T07:30:51.574Z] [DB] Checking for existing user [ID: m93w9qc89nr7to3menl]
+{ email: 'employertest@gmail.com' }
+
+[2025-04-05T07:30:51.579Z] [AUTH] Email check passed [ID: m93w9qc89nr7to3menl]
+{ emailAvailable: true }
+
+[2025-04-05T07:30:51.580Z] [DB] Attempting to save user [ID: m93w9qc89nr7to3menl]
+{
+  name: 'Employer Test',
+  email: 'employertest@gmail.com',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-04-05T07:30:51.598Z] [DB] User saved successfully [ID: m93w9qc89nr7to3menl]
+{ userId: '67f0dc2b558ff0d1e0e5992a', role: 'jobseeker' }
+
+[2025-04-05T07:30:51.599Z] [AUTH] Preparing token generation [ID: m93w9qc89nr7to3menl]
+{ userId: '67f0dc2b558ff0d1e0e5992a', role: 'jobseeker' }
+
+[2025-04-05T07:30:51.600Z] [AUTH] Calling generateTokens [ID: m93w9qc89nr7to3menl]
+{ attempting: true }
+
+[2025-04-05T07:30:51.602Z] [AUTH] Tokens generation attempt completed [ID: m93w9qc89nr7to3menl]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T07:30:51.602Z] [SUCCESS] Registration successful [ID: m93w9qc89nr7to3menl]
+{
+  userId: '67f0dc2b558ff0d1e0e5992a',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T13:05:17.698Z] [DEBUG] Registration request received [ID: m9487tkxztg2n80bvgd]
+{
+  body: {
+    name: 'Test Seeker',
+    email: 'seeker@gmail.com',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '93',
+    'sec-ch-ua-platform': '"macOS"',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T13:05:17.700Z] [DB] Database connection state [ID: m9487tkxztg2n80bvgd]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T13:05:17.819Z] [SECURITY] Password hashed successfully [ID: m9487tkxztg2n80bvgd]
+{ success: true }
+
+[2025-04-05T13:05:17.820Z] [DB] Collection selected for role [ID: m9487tkxztg2n80bvgd]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-04-05T13:05:17.820Z] [DB] Checking for existing user [ID: m9487tkxztg2n80bvgd]
+{ email: 'seeker@gmail.com' }
+
+[2025-04-05T13:05:18.024Z] [AUTH] Email check passed [ID: m9487tkxztg2n80bvgd]
+{ emailAvailable: true }
+
+[2025-04-05T13:05:18.025Z] [DB] Attempting to save user [ID: m9487tkxztg2n80bvgd]
+{
+  name: 'Test Seeker',
+  email: 'seeker@gmail.com',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-04-05T13:05:18.176Z] [DB] User saved successfully [ID: m9487tkxztg2n80bvgd]
+{ userId: '67f12a8ef9b316105ade1d54', role: 'jobseeker' }
+
+[2025-04-05T13:05:18.176Z] [AUTH] Preparing token generation [ID: m9487tkxztg2n80bvgd]
+{ userId: '67f12a8ef9b316105ade1d54', role: 'jobseeker' }
+
+[2025-04-05T13:05:18.177Z] [AUTH] Calling generateTokens [ID: m9487tkxztg2n80bvgd]
+{ attempting: true }
+
+[2025-04-05T13:05:18.201Z] [AUTH] Tokens generation attempt completed [ID: m9487tkxztg2n80bvgd]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T13:05:18.202Z] [SUCCESS] Registration successful [ID: m9487tkxztg2n80bvgd]
+{
+  userId: '67f12a8ef9b316105ade1d54',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T13:06:05.505Z] [DEBUG] Registration request received [ID: m9488ugxf1g64vm1xsi]
+{
+  body: {
+    name: 'Job Poster',
+    email: 'poster@gmail.com',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '93',
+    'sec-ch-ua-platform': '"macOS"',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T13:06:05.506Z] [DB] Database connection state [ID: m9488ugxf1g64vm1xsi]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T13:06:05.599Z] [SECURITY] Password hashed successfully [ID: m9488ugxf1g64vm1xsi]
+{ success: true }
+
+[2025-04-05T13:06:05.600Z] [DB] Collection selected for role [ID: m9488ugxf1g64vm1xsi]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-04-05T13:06:05.600Z] [DB] Checking for existing user [ID: m9488ugxf1g64vm1xsi]
+{ email: 'poster@gmail.com' }
+
+[2025-04-05T13:06:05.602Z] [AUTH] Email check passed [ID: m9488ugxf1g64vm1xsi]
+{ emailAvailable: true }
+
+[2025-04-05T13:06:05.602Z] [DB] Attempting to save user [ID: m9488ugxf1g64vm1xsi]
+{
+  name: 'Job Poster',
+  email: 'poster@gmail.com',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-04-05T13:06:05.606Z] [DB] User saved successfully [ID: m9488ugxf1g64vm1xsi]
+{ userId: '67f12abdf9b316105ade1d63', role: 'jobseeker' }
+
+[2025-04-05T13:06:05.607Z] [AUTH] Preparing token generation [ID: m9488ugxf1g64vm1xsi]
+{ userId: '67f12abdf9b316105ade1d63', role: 'jobseeker' }
+
+[2025-04-05T13:06:05.607Z] [AUTH] Calling generateTokens [ID: m9488ugxf1g64vm1xsi]
+{ attempting: true }
+
+[2025-04-05T13:06:05.608Z] [AUTH] Tokens generation attempt completed [ID: m9488ugxf1g64vm1xsi]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T13:06:05.608Z] [SUCCESS] Registration successful [ID: m9488ugxf1g64vm1xsi]
+{
+  userId: '67f12abdf9b316105ade1d63',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T13:06:35.039Z] [DEBUG] Registration request received [ID: m9489h9axdns2ewnwx7]
+{
+  body: {
+    name: 'Test User',
+    email: 'jokkk@gmail.com',
+    password: '***REDACTED***',
+    role: 'employer'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '89',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2YxMmFiZGY5YjMxNjEwNWFkZTFkNjMiLCJyb2xlIjoiam9ic2Vla2VyIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc0Mzg1ODM2NSwiZXhwIjoxNzQzOTQ0NzY1fQ.I_o86EQHNiqinSMDr_uVhzqByjTxGhU1MTJ7tpvNf2I',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T13:06:35.039Z] [DB] Database connection state [ID: m9489h9axdns2ewnwx7]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T13:06:35.137Z] [SECURITY] Password hashed successfully [ID: m9489h9axdns2ewnwx7]
+{ success: true }
+
+[2025-04-05T13:06:35.138Z] [DB] Collection selected for role [ID: m9489h9axdns2ewnwx7]
+{ role: 'employer', collectionName: 'employers', exists: true }
+
+[2025-04-05T13:06:35.138Z] [DB] Checking for existing user [ID: m9489h9axdns2ewnwx7]
+{ email: 'jokkk@gmail.com' }
+
+[2025-04-05T13:06:35.149Z] [AUTH] Email check passed [ID: m9489h9axdns2ewnwx7]
+{ emailAvailable: true }
+
+[2025-04-05T13:06:35.149Z] [DB] Attempting to save user [ID: m9489h9axdns2ewnwx7]
+{
+  name: 'Test User',
+  email: 'jokkk@gmail.com',
+  role: 'employer',
+  hasCompanyName: false
+}
+
+[2025-04-05T13:06:35.156Z] [DB] User saved successfully [ID: m9489h9axdns2ewnwx7]
+{ userId: '67f12adbf9b316105ade1d6c', role: 'employer' }
+
+[2025-04-05T13:06:35.156Z] [AUTH] Preparing token generation [ID: m9489h9axdns2ewnwx7]
+{ userId: '67f12adbf9b316105ade1d6c', role: 'employer' }
+
+[2025-04-05T13:06:35.156Z] [AUTH] Calling generateTokens [ID: m9489h9axdns2ewnwx7]
+{ attempting: true }
+
+[2025-04-05T13:06:35.157Z] [AUTH] Tokens generation attempt completed [ID: m9489h9axdns2ewnwx7]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T13:06:35.158Z] [DB] Checking for existing company [ID: m9489h9axdns2ewnwx7]
+{ userId: '67f12adbf9b316105ade1d6c' }
+
+[2025-04-05T13:06:35.168Z] [DB] Creating default company profile [ID: m9489h9axdns2ewnwx7]
+{ userId: '67f12adbf9b316105ade1d6c' }
+
+[2025-04-05T13:06:35.202Z] [DB] Company profile created [ID: m9489h9axdns2ewnwx7]
+{ companyId: '67f12adbf9b316105ade1d6f' }
+
+[2025-04-05T13:06:35.221Z] [DB] Employer record updated with company [ID: m9489h9axdns2ewnwx7]
+{
+  userId: '67f12adbf9b316105ade1d6c',
+  companyId: '67f12adbf9b316105ade1d6f'
+}
+
+[2025-04-05T13:06:35.221Z] [SUCCESS] Registration successful [ID: m9489h9axdns2ewnwx7]
+{
+  userId: '67f12adbf9b316105ade1d6c',
+  role: 'employer',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T13:24:49.089Z] [DEBUG] Registration request received [ID: m948wxfj1x0263ra0xkh]
+{
+  body: {
+    name: 'Test Emplyoer',
+    email: 'testemp@gmail.com',
+    password: '***REDACTED***',
+    role: 'employer'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '95',
+    'sec-ch-ua-platform': '"macOS"',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T13:24:49.090Z] [DB] Database connection state [ID: m948wxfj1x0263ra0xkh]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T13:24:49.196Z] [SECURITY] Password hashed successfully [ID: m948wxfj1x0263ra0xkh]
+{ success: true }
+
+[2025-04-05T13:24:49.197Z] [DB] Collection selected for role [ID: m948wxfj1x0263ra0xkh]
+{ role: 'employer', collectionName: 'employers', exists: true }
+
+[2025-04-05T13:24:49.197Z] [DB] Checking for existing user [ID: m948wxfj1x0263ra0xkh]
+{ email: 'testemp@gmail.com' }
+
+[2025-04-05T13:24:49.205Z] [AUTH] Email check passed [ID: m948wxfj1x0263ra0xkh]
+{ emailAvailable: true }
+
+[2025-04-05T13:24:49.206Z] [DB] Attempting to save user [ID: m948wxfj1x0263ra0xkh]
+{
+  name: 'Test Emplyoer',
+  email: 'testemp@gmail.com',
+  role: 'employer',
+  hasCompanyName: false
+}
+
+[2025-04-05T13:24:49.216Z] [DB] User saved successfully [ID: m948wxfj1x0263ra0xkh]
+{ userId: '67f12f21f9b316105ade1e6a', role: 'employer' }
+
+[2025-04-05T13:24:49.217Z] [AUTH] Preparing token generation [ID: m948wxfj1x0263ra0xkh]
+{ userId: '67f12f21f9b316105ade1e6a', role: 'employer' }
+
+[2025-04-05T13:24:49.217Z] [AUTH] Calling generateTokens [ID: m948wxfj1x0263ra0xkh]
+{ attempting: true }
+
+[2025-04-05T13:24:49.220Z] [AUTH] Tokens generation attempt completed [ID: m948wxfj1x0263ra0xkh]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T13:24:49.220Z] [DB] Checking for existing company [ID: m948wxfj1x0263ra0xkh]
+{ userId: '67f12f21f9b316105ade1e6a' }
+
+[2025-04-05T13:24:49.225Z] [DB] Creating default company profile [ID: m948wxfj1x0263ra0xkh]
+{ userId: '67f12f21f9b316105ade1e6a' }
+
+[2025-04-05T13:24:49.229Z] [DB] Company profile created [ID: m948wxfj1x0263ra0xkh]
+{ companyId: '67f12f21f9b316105ade1e6d' }
+
+[2025-04-05T13:24:49.240Z] [DB] Employer record updated with company [ID: m948wxfj1x0263ra0xkh]
+{
+  userId: '67f12f21f9b316105ade1e6a',
+  companyId: '67f12f21f9b316105ade1e6d'
+}
+
+[2025-04-05T13:24:49.249Z] [SUCCESS] Registration successful [ID: m948wxfj1x0263ra0xkh]
+{
+  userId: '67f12f21f9b316105ade1e6a',
+  role: 'employer',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T13:44:44.635Z] [DEBUG] Registration request received [ID: m949mjx6mykzoxzsgvg]
+{
+  body: {
+    name: 'John Doe',
+    email: '1@gmail.vom',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '85',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwNjgzNjllMDgyM2U3YmNmNWE1NjAiLCJyb2xlIjoiYWRtaW4iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzQzODYwNDI5LCJleHAiOjE3NDM5NDY4Mjl9.cRh4T9R_HhJWQ40mkuCzEiCGbWn2k8ffwqtlGF4JnR4',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T13:44:44.636Z] [DB] Database connection state [ID: m949mjx6mykzoxzsgvg]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T13:44:44.726Z] [SECURITY] Password hashed successfully [ID: m949mjx6mykzoxzsgvg]
+{ success: true }
+
+[2025-04-05T13:44:44.726Z] [DB] Collection selected for role [ID: m949mjx6mykzoxzsgvg]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-04-05T13:44:44.727Z] [DB] Checking for existing user [ID: m949mjx6mykzoxzsgvg]
+{ email: '1@gmail.vom' }
+
+[2025-04-05T13:44:44.729Z] [AUTH] Email check passed [ID: m949mjx6mykzoxzsgvg]
+{ emailAvailable: true }
+
+[2025-04-05T13:44:44.730Z] [DB] Attempting to save user [ID: m949mjx6mykzoxzsgvg]
+{
+  name: 'John Doe',
+  email: '1@gmail.vom',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-04-05T13:44:44.740Z] [DB] User saved successfully [ID: m949mjx6mykzoxzsgvg]
+{ userId: '67f133ccf9b316105ade1f66', role: 'jobseeker' }
+
+[2025-04-05T13:44:44.741Z] [AUTH] Preparing token generation [ID: m949mjx6mykzoxzsgvg]
+{ userId: '67f133ccf9b316105ade1f66', role: 'jobseeker' }
+
+[2025-04-05T13:44:44.741Z] [AUTH] Calling generateTokens [ID: m949mjx6mykzoxzsgvg]
+{ attempting: true }
+
+[2025-04-05T13:44:44.742Z] [AUTH] Tokens generation attempt completed [ID: m949mjx6mykzoxzsgvg]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T13:44:44.742Z] [SUCCESS] Registration successful [ID: m949mjx6mykzoxzsgvg]
+{
+  userId: '67f133ccf9b316105ade1f66',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T14:11:09.851Z] [DEBUG] Registration request received [ID: m94akj2y1wx5vdu7ghe]
+{
+  body: {
+    name: 'Test employer',
+    email: 'testemloyer@gmail.com',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '100',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwOWI4MGIzYmUxMTg3ZDllZGM0ZDYiLCJyb2xlIjoiam9ic2Vla2VyIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc0Mzg2MjAzOSwiZXhwIjoxNzQzOTQ4NDM5fQ.k0QycI-JZEWnn6M4jYgp6BuXWqdLc1MdXJ4_8xiWtFU',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T14:11:09.853Z] [DB] Database connection state [ID: m94akj2y1wx5vdu7ghe]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T14:11:09.948Z] [SECURITY] Password hashed successfully [ID: m94akj2y1wx5vdu7ghe]
+{ success: true }
+
+[2025-04-05T14:11:09.948Z] [DB] Collection selected for role [ID: m94akj2y1wx5vdu7ghe]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-04-05T14:11:09.949Z] [DB] Checking for existing user [ID: m94akj2y1wx5vdu7ghe]
+{ email: 'testemloyer@gmail.com' }
+
+[2025-04-05T14:11:09.951Z] [AUTH] Email check passed [ID: m94akj2y1wx5vdu7ghe]
+{ emailAvailable: true }
+
+[2025-04-05T14:11:09.951Z] [DB] Attempting to save user [ID: m94akj2y1wx5vdu7ghe]
+{
+  name: 'Test employer',
+  email: 'testemloyer@gmail.com',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-04-05T14:11:09.953Z] [DB] User saved successfully [ID: m94akj2y1wx5vdu7ghe]
+{ userId: '67f139fdf9b316105ade1fc2', role: 'jobseeker' }
+
+[2025-04-05T14:11:09.954Z] [AUTH] Preparing token generation [ID: m94akj2y1wx5vdu7ghe]
+{ userId: '67f139fdf9b316105ade1fc2', role: 'jobseeker' }
+
+[2025-04-05T14:11:09.954Z] [AUTH] Calling generateTokens [ID: m94akj2y1wx5vdu7ghe]
+{ attempting: true }
+
+[2025-04-05T14:11:09.955Z] [AUTH] Tokens generation attempt completed [ID: m94akj2y1wx5vdu7ghe]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T14:11:09.956Z] [SUCCESS] Registration successful [ID: m94akj2y1wx5vdu7ghe]
+{
+  userId: '67f139fdf9b316105ade1fc2',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-04-05T14:11:45.009Z] [DEBUG] Registration request received [ID: m94ala7lsj8zmzbigd]
+{
+  body: {
+    name: 'John Doe',
+    email: 'johndoee@gmail.com',
+    password: '***REDACTED***',
+    role: 'employer'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '91',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwOWI4MGIzYmUxMTg3ZDllZGM0ZDYiLCJyb2xlIjoiam9ic2Vla2VyIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc0Mzg2MjAzOSwiZXhwIjoxNzQzOTQ4NDM5fQ.k0QycI-JZEWnn6M4jYgp6BuXWqdLc1MdXJ4_8xiWtFU',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-04-05T14:11:45.009Z] [DB] Database connection state [ID: m94ala7lsj8zmzbigd]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-04-05T14:11:45.100Z] [SECURITY] Password hashed successfully [ID: m94ala7lsj8zmzbigd]
+{ success: true }
+
+[2025-04-05T14:11:45.100Z] [DB] Collection selected for role [ID: m94ala7lsj8zmzbigd]
+{ role: 'employer', collectionName: 'employers', exists: true }
+
+[2025-04-05T14:11:45.101Z] [DB] Checking for existing user [ID: m94ala7lsj8zmzbigd]
+{ email: 'johndoee@gmail.com' }
+
+[2025-04-05T14:11:45.103Z] [AUTH] Email check passed [ID: m94ala7lsj8zmzbigd]
+{ emailAvailable: true }
+
+[2025-04-05T14:11:45.103Z] [DB] Attempting to save user [ID: m94ala7lsj8zmzbigd]
+{
+  name: 'John Doe',
+  email: 'johndoee@gmail.com',
+  role: 'employer',
+  hasCompanyName: false
+}
+
+[2025-04-05T14:11:45.105Z] [DB] User saved successfully [ID: m94ala7lsj8zmzbigd]
+{ userId: '67f13a21f9b316105ade1fcb', role: 'employer' }
+
+[2025-04-05T14:11:45.105Z] [AUTH] Preparing token generation [ID: m94ala7lsj8zmzbigd]
+{ userId: '67f13a21f9b316105ade1fcb', role: 'employer' }
+
+[2025-04-05T14:11:45.105Z] [AUTH] Calling generateTokens [ID: m94ala7lsj8zmzbigd]
+{ attempting: true }
+
+[2025-04-05T14:11:45.106Z] [AUTH] Tokens generation attempt completed [ID: m94ala7lsj8zmzbigd]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-04-05T14:11:45.107Z] [DB] Checking for existing company [ID: m94ala7lsj8zmzbigd]
+{ userId: '67f13a21f9b316105ade1fcb' }
+
+[2025-04-05T14:11:45.111Z] [DB] Creating default company profile [ID: m94ala7lsj8zmzbigd]
+{ userId: '67f13a21f9b316105ade1fcb' }
+
+[2025-04-05T14:11:45.148Z] [ERROR] Error creating company profile [ID: m94ala7lsj8zmzbigd]
+{
+  message: `E11000 duplicate key error collection: fbla_job_board.companies index: name_1 dup key: { name: "John Doe's Company" }`,
+  stack: `MongoServerError: E11000 duplicate key error collection: fbla_job_board.companies index: name_1 dup key: { name: "John Doe's Company" }\n` +
+    '    at InsertOneOperation.execute (/Users/carlosgonzalez/FBLA 2024-2025 FIXED/backend/node_modules/mongodb/src/operations/insert.ts:88:13)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at tryOperation (/Users/carlosgonzalez/FBLA 2024-2025 FIXED/backend/node_modules/mongodb/src/operations/execute_operation.ts:283:14)\n' +
+    '    at executeOperation (/Users/carlosgonzalez/FBLA 2024-2025 FIXED/backend/node_modules/mongodb/src/operations/execute_operation.ts:115:12)\n' +
+    '    at Collection.insertOne (/Users/carlosgonzalez/FBLA 2024-2025 FIXED/backend/node_modules/mongodb/src/collection.ts:285:12)\n' +
+    '    at register (/Users/carlosgonzalez/FBLA 2024-2025 FIXED/backend/src/controllers/auth.controller.ts:350:35)',
+  name: 'MongoServerError',
+  code: 11000
+}
+
+[2025-04-05T14:11:45.149Z] [SUCCESS] Registration successful [ID: m94ala7lsj8zmzbigd]
+{
+  userId: '67f13a21f9b316105ade1fcb',
+  role: 'employer',
+  status: 201,
+  tokensGenerated: true
+}
+

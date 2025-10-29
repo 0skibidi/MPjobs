@@ -1,0 +1,165 @@
+[2025-10-29T00:59:12.917Z] [DEBUG] Registration request received [ID: mhbafes30ivkeij0t2rc]
+{
+  body: {
+    name: 'Job Goat',
+    email: 'goatjob@gmail.com',
+    password: '***REDACTED***',
+    role: 'employer'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '90',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwNjgzNjllMDgyM2U3YmNmNWE1NjAiLCJyb2xlIjoiYWRtaW4iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYxNjk5MjU2LCJleHAiOjE3NjE3ODU2NTZ9.v3I6FwplyQ6KRUK_xlyi_FJjl8uQftRy1zxM8Ea0YZE',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-10-29T00:59:12.922Z] [DB] Database connection state [ID: mhbafes30ivkeij0t2rc]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-10-29T00:59:13.028Z] [SECURITY] Password hashed successfully [ID: mhbafes30ivkeij0t2rc]
+{ success: true }
+
+[2025-10-29T00:59:13.029Z] [DB] Collection selected for role [ID: mhbafes30ivkeij0t2rc]
+{ role: 'employer', collectionName: 'employers', exists: true }
+
+[2025-10-29T00:59:13.029Z] [DB] Checking for existing user [ID: mhbafes30ivkeij0t2rc]
+{ email: 'goatjob@gmail.com' }
+
+[2025-10-29T00:59:13.062Z] [AUTH] Email check passed [ID: mhbafes30ivkeij0t2rc]
+{ emailAvailable: true }
+
+[2025-10-29T00:59:13.063Z] [DB] Attempting to save user [ID: mhbafes30ivkeij0t2rc]
+{
+  name: 'Job Goat',
+  email: 'goatjob@gmail.com',
+  role: 'employer',
+  hasCompanyName: false
+}
+
+[2025-10-29T00:59:13.084Z] [DB] User saved successfully [ID: mhbafes30ivkeij0t2rc]
+{ userId: '690166e13f33e30b338f2036', role: 'employer' }
+
+[2025-10-29T00:59:13.085Z] [AUTH] Preparing token generation [ID: mhbafes30ivkeij0t2rc]
+{ userId: '690166e13f33e30b338f2036', role: 'employer' }
+
+[2025-10-29T00:59:13.085Z] [AUTH] Calling generateTokens [ID: mhbafes30ivkeij0t2rc]
+{ attempting: true }
+
+[2025-10-29T00:59:13.088Z] [AUTH] Tokens generation attempt completed [ID: mhbafes30ivkeij0t2rc]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-10-29T00:59:13.089Z] [DB] Checking for existing company [ID: mhbafes30ivkeij0t2rc]
+{ userId: '690166e13f33e30b338f2036' }
+
+[2025-10-29T00:59:13.120Z] [DB] Creating default company profile [ID: mhbafes30ivkeij0t2rc]
+{ userId: '690166e13f33e30b338f2036' }
+
+[2025-10-29T00:59:13.130Z] [DB] Company profile created [ID: mhbafes30ivkeij0t2rc]
+{ companyId: '690166e13f33e30b338f2039' }
+
+[2025-10-29T00:59:13.215Z] [DB] Employer record updated with company [ID: mhbafes30ivkeij0t2rc]
+{
+  userId: '690166e13f33e30b338f2036',
+  companyId: '690166e13f33e30b338f2039'
+}
+
+[2025-10-29T00:59:13.215Z] [SUCCESS] Registration successful [ID: mhbafes30ivkeij0t2rc]
+{
+  userId: '690166e13f33e30b338f2036',
+  role: 'employer',
+  status: 201,
+  tokensGenerated: true
+}
+
+[2025-10-29T01:20:52.655Z] [DEBUG] Registration request received [ID: mhbb79nx9eqi5itcvyp]
+{
+  body: {
+    name: 'jabseek rs',
+    email: 'jjjjj@gmail.cpm',
+    password: '***REDACTED***',
+    role: 'jobseeker'
+  },
+  headers: {
+    host: 'localhost:5002',
+    connection: 'keep-alive',
+    'content-length': '90',
+    'sec-ch-ua-platform': '"macOS"',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2MwNjgzNjllMDgyM2U3YmNmNWE1NjAiLCJyb2xlIjoiYWRtaW4iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNzYxNzAwNzA3LCJleHAiOjE3NjE3ODcxMDd9.xGuER7EnHaV6TZjekLpCxOs7JZcdtjbr-KzQq3DnlO4',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
+    accept: 'application/json, text/plain, */*',
+    'sec-ch-ua': '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
+    'content-type': 'application/json',
+    'sec-ch-ua-mobile': '?0',
+    origin: 'http://localhost:5173',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'en-US,en;q=0.9'
+  },
+  ip: '127.0.0.1',
+  method: 'POST',
+  path: '/register'
+}
+
+[2025-10-29T01:20:52.658Z] [DB] Database connection state [ID: mhbb79nx9eqi5itcvyp]
+{ readyState: 1, db: 'fbla_job_board', host: 'localhost' }
+
+[2025-10-29T01:20:52.779Z] [SECURITY] Password hashed successfully [ID: mhbb79nx9eqi5itcvyp]
+{ success: true }
+
+[2025-10-29T01:20:52.779Z] [DB] Collection selected for role [ID: mhbb79nx9eqi5itcvyp]
+{ role: 'jobseeker', collectionName: 'jobseekers', exists: true }
+
+[2025-10-29T01:20:52.780Z] [DB] Checking for existing user [ID: mhbb79nx9eqi5itcvyp]
+{ email: 'jjjjj@gmail.cpm' }
+
+[2025-10-29T01:20:52.796Z] [AUTH] Email check passed [ID: mhbb79nx9eqi5itcvyp]
+{ emailAvailable: true }
+
+[2025-10-29T01:20:52.797Z] [DB] Attempting to save user [ID: mhbb79nx9eqi5itcvyp]
+{
+  name: 'jabseek rs',
+  email: 'jjjjj@gmail.cpm',
+  role: 'jobseeker',
+  hasCompanyName: false
+}
+
+[2025-10-29T01:20:52.810Z] [DB] User saved successfully [ID: mhbb79nx9eqi5itcvyp]
+{ userId: '69016bf4031860ea0f306ca2', role: 'jobseeker' }
+
+[2025-10-29T01:20:52.811Z] [AUTH] Preparing token generation [ID: mhbb79nx9eqi5itcvyp]
+{ userId: '69016bf4031860ea0f306ca2', role: 'jobseeker' }
+
+[2025-10-29T01:20:52.811Z] [AUTH] Calling generateTokens [ID: mhbb79nx9eqi5itcvyp]
+{ attempting: true }
+
+[2025-10-29T01:20:52.813Z] [AUTH] Tokens generation attempt completed [ID: mhbb79nx9eqi5itcvyp]
+{ success: true, hasAccessToken: true, hasRefreshToken: true }
+
+[2025-10-29T01:20:52.813Z] [SUCCESS] Registration successful [ID: mhbb79nx9eqi5itcvyp]
+{
+  userId: '69016bf4031860ea0f306ca2',
+  role: 'jobseeker',
+  status: 201,
+  tokensGenerated: true
+}
+
